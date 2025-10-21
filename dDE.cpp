@@ -15,15 +15,10 @@ void dE(std::string expression)
 	
 	for (int i = 0; i <= expression.length(); i++)
 	{
-		if (expression[i] == '(' or expression[i] == ')' or expression[i] == '^' or expression[i] == '/' or expression[i] == '*' or expression[i] == '-' or expression[i] == '+' or expression[i] == 'f' or expression[i] == 'xa') //separer les nbs
+		if (expression[i] == '(' or expression[i] == ')' or expression[i] == '^' or expression[i] == '/' or expression[i] == '*' or expression[i] == '-' or expression[i] == '+' or expression[i] == 'f' or expression[i] == 'x') //separer les nbs
 		{
 			int nB = i;
 
-			if (nB > 20)
-				std::cout << "erreur le nombre contien plus de 20 chiffre" << std::endl;
-
-			else
-			{
 				expression.copy(coP, nB, start);
 
 				double st = std::stod(coP, 0);
@@ -31,9 +26,53 @@ void dE(std::string expression)
 				nb.push_back(st);
 
 				start = i + 1;
-			}
 
-			
+				if (expression[i] == '(')
+				{
+					operateur.push_back("(");
+				}
+
+
+				if (expression[i] == ')')
+				{
+					operateur.push_back(")");
+				}
+
+
+				if (expression[i] == '^')
+				{
+					operateur.push_back("^");
+				}
+
+
+				if (expression[i] == '/')
+				{
+					operateur.push_back("/");
+				}
+
+
+				if (expression[i] == '*')
+				{
+					operateur.push_back("*");
+				}
+
+
+				if (expression[i] == '-')
+				{
+					operateur.push_back("-");
+				}
+
+
+				if (expression[i] == '+')
+				{
+					operateur.push_back("+");
+				}
+
+
+				if (expression[i] == 'x')
+				{
+					operateur.push_back("x");
+				}
 		}
 
 		else if (expression[i] == 'l')
@@ -47,12 +86,13 @@ void dE(std::string expression)
 						operateur.push_back("(");
 						i = i + 3;
 
-						start = i + 4;
+						start = i + 1;
 					}
 
 					else
 						start = i + 3;
 				}
+
 		else if (expression[i] == 't')
 			if (expression[i + 1] == 'a')
 				if (expression[i + 2] == 'n')
@@ -64,7 +104,7 @@ void dE(std::string expression)
 						operateur.push_back("(");
 						i = i + 3;
 
-						start = i + 4;
+						start = i + 1;
 					}
 
 					else
@@ -82,7 +122,7 @@ void dE(std::string expression)
 						operateur.push_back("(");
 						i = i + 3;
 
-						start = i + 4;
+						start = i + 1;
 					}
 
 					else
@@ -100,7 +140,7 @@ void dE(std::string expression)
 						operateur.push_back("(");
 						i = i + 3;
 
-						start = i + 4;
+						start = i + 1;
 					}
 
 					else

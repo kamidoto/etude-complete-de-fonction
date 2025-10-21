@@ -14,8 +14,8 @@ int main()
          
         dE(fonction);
 
-        std::cout << "slt "<< nb[0] << std::endl ;
+        std::cout << "slt " << nb[0] << std::endl<<nb[1]<<std::endl ;
         
-        std::cout << "string " << operateur[0] << std::endl ;
+        //std::cout << "string " << operateur[0] << std::endl ;
     }
 }

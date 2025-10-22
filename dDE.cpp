@@ -10,20 +10,22 @@ std::vector <std::string> operateur;
 void dE(std::string expression)
 {
 	int start = 0;
-	char coP[20];
 	std::string sTD; //transformer l chaine de character en nombre(double)
 	
 	for (int i = 0; i <= expression.length(); i++)
 	{
 		if (expression[i] == '(' or expression[i] == ')' or expression[i] == '^' or expression[i] == '/' or expression[i] == '*' or expression[i] == '-' or expression[i] == '+' or expression[i] == 'f' or expression[i] == 'x') //separer les nbs
 		{
+			char* coP = new char[i-start];
+
 			int nB = i;
 
 				expression.copy(coP, nB, start);
 
 				double st = std::stod(coP, 0);
-
 				nb.push_back(st);
+
+				delete coP;
 
 				start = i + 1;
 

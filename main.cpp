@@ -12,10 +12,15 @@ int main()
       
         std::getline (std::cin,fonction);
          
+        if (fonction == "help")
+        {
+            
+        }
+
         dE(fonction);
 
-        std::cout << "slt " << nb[0] << std::endl<<nb[1]<<std::endl ;
+        std::cout << "double " << nb[0] << std::endl<<nb[1]<<std::endl ;
         
-        //std::cout << "string " << operateur[0] << std::endl ;
+        std::cout << "string " << operateur[0] << std::endl ;
     }
 }

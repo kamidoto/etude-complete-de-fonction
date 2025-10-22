@@ -14,7 +14,7 @@ void dE(std::string expression)
 	
 	for (int i = 0; i <= expression.length(); i++)
 	{
-		if (expression[i] == '(' or expression[i] == ')' or expression[i] == '^' or expression[i] == '/' or expression[i] == '*' or expression[i] == '-' or expression[i] == '+' or expression[i] == 'f' or expression[i] == 'x') //separer les nbs
+		if (expression[i] == '(' or expression[i] == ')' or expression[i] == '^' or expression[i] == '/' or expression[i] == '*' or expression[i] == '-' or expression[i] == '+' or expression[i] == '\0' or expression[i] == 'x') //separer les nbs
 		{
 			char* coP = new char[i-start];
 
